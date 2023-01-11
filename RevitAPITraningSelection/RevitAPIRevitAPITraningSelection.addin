@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>"C:\Program Files\RevitAPITrainig\RevitAPITraningSelection.dll"</Assembly>
+		<AddInId>80689E6D-94EC-45F8-A399-01794416BF6F</AddInId>
+		<FullClassName>RevitAPITraningSelection.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Приложение выбор элемента Revit</Text>
+	</AddIn>
+</RevitAddIns>
