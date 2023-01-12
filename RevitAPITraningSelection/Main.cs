@@ -14,7 +14,14 @@ namespace RevitAPITraningSelection
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            TaskDialog.Show("Сщбщение", "Тест");
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Document doc = uidoc.Document;
+
+            Reference selectedElementRef = uidoc.Selection.PickObject(ObjectType.Element, "Выберете элемент");
+            Element element = doc.GetElement(selectedElementRef);
+
+            TaskDialog.Show("Selection", $"Имя: {element.Name}{Environment.NewLine}Id: {element.Id}");
             return Result.Succeeded;
         }
     }
